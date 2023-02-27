@@ -1,11 +1,11 @@
-About isabelle-client
-=====================
+About isabelle-client-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/isabelle-client-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/inpefess/isabelle-client
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/isabelle-client-feedstock/blob/main/LICENSE.txt)
 
 Summary: A client for Isabelle server (https://isabelle.in.tum.de)
 
