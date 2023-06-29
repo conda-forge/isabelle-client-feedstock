@@ -1,5 +1,5 @@
 {% set name = "isabelle-client" %}
-{% set version = "0.3.17" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/isabelle_client-{{ version }}.tar.gz
-  sha256: 90dc782c9eda124882fcea5260d9184329b7ec89e6963368ae92e25f669e6800
+  sha256: ab35fc23fe5b886b7c3c0773445d3f27d393d21b057815711df3d8f9f512de4a
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - poetry-core >=1.0.0
   run:
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
