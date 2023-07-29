@@ -32,7 +32,7 @@ test:
     - isabelle_client
   commands:
     - pip check
-    - pytest --override-ini doctest_optionflags=NORMALIZE_WHITESPACE --doctest-modules isabelle_client
+    - pytest --override-ini doctest_optionflags=ELLIPSIS --doctest-modules isabelle_client
 
 about:
   home: https://github.com/inpefess/isabelle-client
