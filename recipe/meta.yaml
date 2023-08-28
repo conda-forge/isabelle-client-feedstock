@@ -1,5 +1,5 @@
 {% set name = "isabelle-client" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/isabelle_client-{{ version }}.tar.gz
-  sha256: b4427885a71f0c905ef4ce0d4e6567a18766ab9aa74d637fc339e3efc6511bc6
+  sha256: 4a2f4264b36f13065b13fe3d1c2d014a813e2b5edc6adb73e19de03a5391a1b0
 
 build:
   noarch: python
