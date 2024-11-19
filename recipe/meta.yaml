@@ -1,13 +1,14 @@
 {% set name = "isabelle-client" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/isabelle_client-{{ version }}.tar.gz
-  sha256: de9ba33094e74a6decb681985806717903d5da7b58bd6edb43276f3d1112dd68
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/isabelle_client-{{ version }}.tar.gz
+  sha256: 37aee69faed98b690ad7d94e6156af9443fbd39a0aa388d4151abf13d23b3c3c
 
 build:
   noarch: python
@@ -16,17 +17,19 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.0.0
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
     - isabelle_client
   requires:
+    - python {{ python_min }}
     - pip
+    - importlib_resources
     - pytest
   source_files:
     - isabelle_client
