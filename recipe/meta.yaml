@@ -1,6 +1,6 @@
 {% set name = "isabelle-client" %}
-{% set version = "0.5.1" %}
-{% set python_min = "3.8" %}
+{% set version = "0.5.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/isabelle_client-{{ version }}.tar.gz
-  sha256: 37aee69faed98b690ad7d94e6156af9443fbd39a0aa388d4151abf13d23b3c3c
+  sha256: f19013f896f02ab5f5ae2b664fd82ad2c052ff12984212b7841d671533f4bf1f
 
 build:
   noarch: python
@@ -29,7 +29,6 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - importlib_resources
     - pytest
   source_files:
     - isabelle_client
