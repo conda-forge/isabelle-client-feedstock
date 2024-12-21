@@ -29,7 +29,6 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - importlib_resources
     - pytest
   source_files:
     - isabelle_client
