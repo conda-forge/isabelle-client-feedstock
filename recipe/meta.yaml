@@ -25,17 +25,15 @@ requirements:
     - pydantic
 
 test:
-  imports:
-    - isabelle_client
   requires:
     - python {{ python_min }}
     - pip
     - pytest
   source_files:
-    - isabelle_client
+    - src
   commands:
     - pip check
-    - pytest --override-ini doctest_optionflags=ELLIPSIS --doctest-modules isabelle_client
+    - pytest --doctest-modules
 
 about:
   home: https://github.com/inpefess/isabelle-client
