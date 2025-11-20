@@ -1,6 +1,6 @@
 {% set name = "isabelle-client" %}
-{% set version = "0.6.0" %}
-{% set python_min = "3.9" %}
+{% set version = "1.0.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/isabelle_client-{{ version }}.tar.gz
-  sha256: 49d2ad0335dd86e6440e1b3f9261ae1dfdb42afaf4dfceb67325fe3d56f23ff3
+  sha256: 81646ba99020108c21a1bfb3e16fe2a5daf7e0561375ea027a0ee357119bf2c0
 
 build:
   noarch: python
@@ -22,19 +22,18 @@ requirements:
     - poetry-core >=1.0.0
   run:
     - python >={{ python_min }}
+    - pydantic
 
 test:
-  imports:
-    - isabelle_client
   requires:
     - python {{ python_min }}
     - pip
     - pytest
   source_files:
-    - isabelle_client
+    - src
   commands:
     - pip check
-    - pytest --override-ini doctest_optionflags=ELLIPSIS --doctest-modules isabelle_client
+    - pytest --doctest-modules
 
 about:
   home: https://github.com/inpefess/isabelle-client
@@ -45,7 +44,7 @@ about:
   description: |
     isabelle-client is a TCP client for Isabelle server. For more information
     about the server see part 4 of the Isabelle system manual:
-    https://isabelle.in.tum.de/dist/Isabelle2021-1/doc/system.pdf
+    https://isabelle.in.tum.de/dist/Isabelle2025/doc/system.pdf#page=52
   doc_url: https://isabelle-client.readthedocs.io/
   dev_url: https://github.com/inpefess/isabelle-client
 
