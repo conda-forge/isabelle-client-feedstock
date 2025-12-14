@@ -15,7 +15,7 @@ Documentation: https://isabelle-client.readthedocs.io/
 
 isabelle-client is a TCP client for Isabelle server. For more information
 about the server see part 4 of the Isabelle system manual:
-https://isabelle.in.tum.de/dist/Isabelle2021-1/doc/system.pdf
+https://isabelle.in.tum.de/dist/Isabelle2025/doc/system.pdf#page=52
 
 
 Current build status
