@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - poetry-core >=1.0.0
+    - uv-build >=0.11.7
   run:
     - python >={{ python_min }}
     - pydantic
