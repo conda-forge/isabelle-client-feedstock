@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - uv-build >=0.11.7
+    - uv-build >=0.13.9
   run:
     - python >={{ python_min }}
     - pydantic
